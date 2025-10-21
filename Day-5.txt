@@ -1,0 +1,182 @@
+Q1:
+Write a Java program to input the radius of a circle and calculate its area using the formula:
+Area = π × r²
+Display the result as a floating-point number with two decimal places.
+
+Solution:-
+import java.util.Scanner;
+
+public class AreaOfCircle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter radius: ");
+        double r = sc.nextDouble();
+        double area = Math.PI * r * r;
+        System.out.printf("Area of Circle: %.2f", area);
+    }
+}
+
+
+
+Q2)
+ Write a Java program to calculate Simple Interest and Total Amount.
+ Input values should include:
+Principal (double)
+
+
+Rate of Interest in % (double)
+
+
+Time in years (double)
+ Use the formula:
+ Simple Interest = (P × R × T) / 100
+ Display the interest and total amount.
+
+Solution:-
+import java.util.Scanner;
+
+public class SimpleInterest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Principal: ");
+        double p = sc.nextDouble();
+        System.out.print("Enter Rate of Interest (%): ");
+        double r = sc.nextDouble();
+        System.out.print("Enter Time (years): ");
+        double t = sc.nextDouble();
+
+        double si = (p * r * t) / 100;
+        double total = p + si;
+
+        System.out.println("Simple Interest: " + si);
+        System.out.println("Total Amount: " + total);
+    }
+}
+
+
+Q3:
+ Write a Java program to calculate Compound Interest and Total Amount.
+ Input values should include:
+Principal (double)
+Rate of Interest in % (double)
+Time in years (double)
+
+ Use the formula:
+ Amount = P × (1 + R/100)ᵀ
+ Compound Interest = Amount − Principal
+ Display the compound interest and total amount
+
+Solution:-
+import java.util.Scanner;
+
+public class CompoundInterest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Principal: ");
+        double p = sc.nextDouble();
+        System.out.print("Enter Rate of Interest (%): ");
+        double r = sc.nextDouble();
+        System.out.print("Enter Time (years): ");
+        double t = sc.nextDouble();
+
+        double amount = p * Math.pow((1 + r / 100), t);
+        double ci = amount - p;
+
+        System.out.println("Compound Interest: " + ci);
+        System.out.println("Total Amount: " + amount);
+    }
+}
+
+
+Q4:
+ Write a Java program to input and display student details.
+ The program should ask the user to enter:
+Name (String)
+Roll Number (int)
+Age (int)
+Grade (String)
+
+ Then, print all the student details in a clear format.
+
+Solution:-
+
+import java.util.Scanner;
+
+public class StudentDetails {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Name: ");
+        String name = sc.nextLine();
+        System.out.print("Enter Roll Number: ");
+        int roll = sc.nextInt();
+        System.out.print("Enter Age: ");
+        int age = sc.nextInt();
+        sc.nextLine(); // clear buffer
+        System.out.print("Enter Grade: ");
+        String grade = sc.nextLine();
+
+        System.out.println("\n--- Student Details ---");
+        System.out.println("Name: " + name);
+        System.out.println("Roll Number: " + roll);
+        System.out.println("Age: " + age);
+        System.out.println("Grade: " + grade);
+    }
+}
+
+Q5)
+Q:
+ Write a Java program to calculate Simple Interest and Compound Interest where the time is entered in months.
+Input:
+Principal amount (double)
+Annual rate of interest in percentage (double)
+Time in months (int)
+Requirements:
+Convert time in months to years.
+Calculate:
+
+Simple Interest using the formula:
+ SI = (Principal × Rate × Time) / 100
+
+Compound Interest using the formula:
+ CI = Principal × (1 + Rate/100)^Time − Principal
+
+Print both interests and their corresponding total amounts.
+Output:
+Time in years (converted from months)
+Simple Interest and Total with Simple Interest
+Compound Interest and Total with Compound Interest
+
+Solution:-
+
+
+import java.util.Scanner;
+
+public class InterestInMonths {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Principal: ");
+        double p = sc.nextDouble();
+        System.out.print("Enter Annual Rate (%): ");
+        double r = sc.nextDouble();
+        System.out.print("Enter Time in months: ");
+        int months = sc.nextInt();
+
+        double timeInYears = months / 12.0;
+
+        double si = (p * r * timeInYears) / 100;
+        double amountSI = p + si;
+
+        double amountCI = p * Math.pow((1 + r / 100), timeInYears);
+        double ci = amountCI - p;
+
+        System.out.println("Time in Years: " + timeInYears);
+        System.out.println("Simple Interest: " + si);
+        System.out.println("Total with SI: " + amountSI);
+        System.out.println("Compound Interest: " + ci);
+        System.out.println("Total with CI: " + amountCI);
+    }
+}
+
+
