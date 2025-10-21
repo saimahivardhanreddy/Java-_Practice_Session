@@ -1,0 +1,131 @@
+Q1)Write a Java program that prompts the user for a character, converts it to its ASCII value, and displays the result.
+
+Input format:
+The input is the character (alphabet/ digit/ special character).
+
+Output format:
+The output is the integer that represents the ASCII value.
+
+Note:
+The code for handling inputs is already been given, your task is to fill in the required code.
+
+Sample Test Cases
+
+Test Case 1 Expected Output
+A
+65
+
+
+Expected Output
+@_
+64
+
+
+Expected Output
+8
+56
+
+
+Expected Output
+b
+98
+
+
+Expected Output
+0
+48
+
+Solution:-
+import java.util.Scanner;
+
+public class AsciiValue {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+        int ascii = (int) ch;
+        System.out.println(ascii);
+    }
+}
+
+
+Q2)Check if a Number is Even or Odd
+Problem:
+ Write a Java program that checks whether a number entered by the user is even or odd.
+
+Solution:-
+
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        if (n % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+
+Q3) Checking Whether a Year is a Leap Year
+Problem:
+ Write a Java program that checks whether a given year is a leap year or not:
+A year is a leap year if it is divisible by 4 and not divisible by 100, except when it is divisible by 400.
+
+Solution:-
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = sc.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            System.out.println("Leap Year");
+        else
+            System.out.println("Not a Leap Year");
+    }
+}
+
+
+Q4) Checking Whether a Number is Positive, Negative, or Zero
+Problem:
+ Write a Java program to check if a given number is positive, negative using a ternary operator.
+Solution:-
+import java.util.Scanner;
+
+public class NumberCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        String result = (num > 0) ? "Positive" : (num < 0) ? "Negative" : "Zero";
+        System.out.println(result);
+    }
+}
+
+
+ Q5)Checking if a Number is Divisible by 5
+Problem:
+ Write a Java program to check if a number is divisible by 5 using a ternary operator
+
+Solution:-
+
+import java.util.Scanner;
+
+public class DivisibleByFive {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        String result = (num % 5 == 0) ? "Divisible by 5" : "Not Divisible by 5";
+        System.out.println(result);
+    }
+}
+
